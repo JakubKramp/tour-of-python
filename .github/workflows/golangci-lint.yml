@@ -15,9 +15,6 @@ jobs:
   golangci:
     name: lint
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-go@v6
@@ -27,3 +24,4 @@ jobs:
         uses: golangci/golangci-lint-action@v9
         with:
           version: v2.10
+          working-directory: backend
