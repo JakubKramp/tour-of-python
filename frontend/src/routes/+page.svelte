@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
 
+
     let editorContainer: HTMLDivElement;
     let outputText = '';
     let isRunning = false;
@@ -89,11 +90,6 @@
         </div>
         <div class="markdown-content">
             <p>{@html renderMarkdown(markdownContent)}</p>
-        </div>
-        <div class="lesson-nav">
-            <button class="nav-btn" disabled>← Previous</button>
-            <span class="lesson-progress">1 / 15</span>
-            <button class="nav-btn">Next →</button>
         </div>
     </div>
 
@@ -280,12 +276,6 @@
     .nav-btn:disabled {
         opacity: 0.3;
         cursor: not-allowed;
-    }
-
-    .lesson-progress {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        color: #3d4f61;
     }
 
     /* Editor panel */
