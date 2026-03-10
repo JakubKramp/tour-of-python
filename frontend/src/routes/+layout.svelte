@@ -1,11 +1,25 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
+  import favicon from '$lib/assets/python-logo-only.png';
+  import Header from '$lib/components/Header.svelte';
 
-	let { children } = $props();
+  let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+  <link rel="icon" href={favicon} />
 </svelte:head>
 
+<Header />
 {@render children()}
+
+<style>
+  :global(*, *::before, *::after) {
+    box-sizing: border-box;
+  }
+
+  :global(html, body) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+</style>
