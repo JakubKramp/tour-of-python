@@ -1,0 +1,1 @@
+Interactive Tour of Python inspired by ["A tour of Go."](https://go.dev/tour/welcome/1)
