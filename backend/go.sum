@@ -1,2 +1,4 @@
+github.com/golangci/golangci-lint v1.64.8 h1:y5TdeVidMtBGG32zgSC7ZXTFNHrsJkDnpO4ItB3Am+I=
+github.com/golangci/golangci-lint v1.64.8/go.mod h1:5cEsUQBSr6zi8XI8OjmcY2Xmliqc4iYL7YoPrL+zLJ4=
 github.com/mattn/go-sqlite3 v1.14.34 h1:3NtcvcUnFBPsuRcno8pUtupspG/GM+9nZ88zgJcp6Zk=
 github.com/mattn/go-sqlite3 v1.14.34/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
