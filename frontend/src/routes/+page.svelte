@@ -6,8 +6,14 @@
     let isRunning = false;
     let editorInstance: any = null;
 
-    // Placeholder markdown content
-    const markdownContent = 'test';
+    let markdownContent = '';
+
+    onMount(async () => {
+        const res = await fetch('/01-introduction.md');
+        markdownContent = await res.text();
+
+        // Monaco setup stays here too...
+    });
 
     // Simple markdown renderer
     function renderMarkdown(md: string): string {
