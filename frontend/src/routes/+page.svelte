@@ -278,12 +278,6 @@
         cursor: not-allowed;
     }
 
-    .lesson-progress {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        color: #3d4f61;
-    }
-
     /* Editor panel */
     .editor-panel {
         background: #0d1117;
