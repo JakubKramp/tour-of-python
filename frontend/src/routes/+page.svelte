@@ -1,5 +1,10 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import SvelteMarkdown from 'svelte-markdown'
+    import PopupLink from '$lib/components/popuplink.svelte';
+
+    const renderers = { link: PopupLink };
+
 
 
     let editorContainer: HTMLDivElement;
@@ -15,19 +20,6 @@
 
         // Monaco setup stays here too...
     });
-
-    // Simple markdown renderer
-    function renderMarkdown(md: string): string {
-        return md
-            .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-            .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-            .replace(/`([^`]+)`/g, '<code>$1</code>')
-            .replace(/```python\n([\s\S]+?)```/g, '<pre><code>$1</code></pre>')
-            .replace(/\n\n/g, '</p><p>')
-            .replace(/^(?!<[h|p|pre])/gm, '')
-            .trim();
-    }
 
     onMount(async () => {
         // Load Monaco editor
@@ -89,7 +81,7 @@
             <span class="lesson-title">Introduction</span>
         </div>
         <div class="markdown-content">
-            <p>{@html renderMarkdown(markdownContent)}</p>
+            <SvelteMarkdown source={markdownContent} renderers={renderers}/>
         </div>
     </div>
 
